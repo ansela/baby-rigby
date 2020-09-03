@@ -42,6 +42,9 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: "center",
       alignItems: "center",
     },
+    [theme.breakpoints.up("md")]: {
+      paddingTop: theme.spacing(4),
+    },
   },
   headings: {
     backgroundColor: "rgba(255, 255, 255, 0.75)",
