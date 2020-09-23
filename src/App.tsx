@@ -21,6 +21,14 @@ let theme = createMuiTheme({
     primary: blue,
     secondary: brown,
   },
+  overrides: {
+    MuiDivider: {
+      root: {
+        marginTop: "16px",
+        marginBottom: "16px",
+      },
+    },
+  },
 })
 theme = responsiveFontSizes(theme)
 
@@ -38,31 +46,27 @@ function App() {
       </Section>
       <BabyBooks />
       <Section header="Registry">
-        <Box mb={2}>
-          <Typography variant="body1">
-            Paige and Sam are incredibly grateful for all the love and support
-            they have received from friends and family. If you wish to
-            contribute towards furnishing all the items a baby requires, please
-            refer to one of the registries below.
-          </Typography>
-        </Box>
+        <Typography variant="body1">
+          Paige and Sam are incredibly grateful for all the love and support
+          they have received from friends and family. If you wish to contribute
+          towards furnishing all the items a baby requires, please refer to one
+          of the registries below.
+        </Typography>
         <Divider />
-        <Box mt={2}>
-          <Grid container>
-            <Grid item sm={12} md={6}>
-              <Typography variant="h3" color="secondary">
-                Babies R Us
-              </Typography>
-              <Typography variant="body1">Info info blah blah</Typography>
-            </Grid>
-            <Grid item sm={12} md={6}>
-              <Typography variant="h3" color="secondary">
-                Another Location
-              </Typography>{" "}
-              <Typography variant="body1">Info info blah blah</Typography>
-            </Grid>
+        <Grid container>
+          <Grid item sm={12} md={6}>
+            <Typography variant="h3" color="secondary">
+              Babies R Us
+            </Typography>
+            <Typography variant="body1">Info info blah blah</Typography>
           </Grid>
-        </Box>
+          <Grid item sm={12} md={6}>
+            <Typography variant="h3" color="secondary">
+              Another Location
+            </Typography>{" "}
+            <Typography variant="body1">Info info blah blah</Typography>
+          </Grid>
+        </Grid>
       </Section>
       <Section header="Guest Book"></Section>
     </ThemeProvider>
