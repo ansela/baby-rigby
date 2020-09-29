@@ -93,12 +93,13 @@ function App() {
             October 17th, 2020
           </Typography>
           <Typography
-            variant="h5"
+            variant="overline"
             color="secondary"
             align="center"
+            component="h5"
             gutterBottom
           >
-            12:45 PM - 4:00 PM
+            Beginning at 12:45 PM
           </Typography>
           <Grid container justify="center">
             <Button
@@ -116,7 +117,14 @@ function App() {
           </Typography>
           <Grid container justify="center">
             <Box py={3}>
-              <Button variant="contained" color="primary" size="large">
+              <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                onClick={() =>
+                  window.open("https://us02web.zoom.us/j/88379151881", "_blank")
+                }
+              >
                 Join Zoom Now
               </Button>
             </Box>
@@ -179,7 +187,7 @@ function App() {
             </Grid>
           </Grid>
         </Section>
-        <Section header="Guest Book"></Section>
+        {/* <Section header="Guest Book"></Section> */}
         <Footer />
       </Content>
     </ThemeProvider>
