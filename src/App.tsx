@@ -7,8 +7,6 @@ import "fontsource-roboto"
 import {
   Typography,
   responsiveFontSizes,
-  Box,
-  makeStyles,
   Grid,
   Divider,
 } from "@material-ui/core"

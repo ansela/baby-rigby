@@ -8,14 +8,32 @@ import {
   TextField,
   DialogActions,
 } from "@material-ui/core"
+import { Book } from "./types"
 
-export interface AddBookDialogProps {}
+interface AddBookDialogProps {
+  addBook: (book: Partial<Book>) => void
+}
 
-const AddBookDialog: React.SFC<AddBookDialogProps> = () => {
-  const [open, setOpen] = React.useState(false)
+const AddBookDialog = ({ addBook }: AddBookDialogProps) => {
+  const [open, setOpen] = React.useState<boolean>(false)
+  const [title, setTitle] = React.useState<string>("")
+  const [name, setName] = React.useState<string>("")
+  const [email, setEmail] = React.useState<string>("")
 
   const handleOpen = () => {
     setOpen(true)
+  }
+  const handleSave = () => {
+    const book: Partial<Book> = {
+      title,
+      name,
+      email,
+    }
+    addBook(book)
+    setTitle("")
+    setName("")
+    setEmail("")
+    handleClose()
   }
   const handleClose = () => {
     setOpen(false)
@@ -37,6 +55,8 @@ const AddBookDialog: React.SFC<AddBookDialogProps> = () => {
             margin="dense"
             id="title"
             label="Book Title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
             fullWidth
             required
           />
@@ -44,6 +64,8 @@ const AddBookDialog: React.SFC<AddBookDialogProps> = () => {
             margin="dense"
             id="name"
             label="Your Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             fullWidth
             required
           />
@@ -53,13 +75,15 @@ const AddBookDialog: React.SFC<AddBookDialogProps> = () => {
             label="Your Email"
             fullWidth
             type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             helperText="Your email will not be displayed"
             required
           />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleSave} color="primary">
             Add Book
           </Button>
         </DialogActions>
