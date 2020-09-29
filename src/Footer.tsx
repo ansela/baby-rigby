@@ -10,7 +10,7 @@ import * as React from "react"
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    backgroundColor: theme.palette.primary[50],
+    backgroundColor: theme.palette.primary[100],
     // color: theme.palette.primary.contrastText,
   },
 }))

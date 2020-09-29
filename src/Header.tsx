@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
     width: "100%",
     position: "absolute",
-    backgroundImage: `linear-gradient(${theme.palette.primary.light}, white)`,
+    backgroundImage: `linear-gradient(${theme.palette.primary.light}, ${theme.palette.primary[50]})`,
   },
 }))
 
