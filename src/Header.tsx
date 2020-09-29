@@ -3,8 +3,6 @@ import { makeStyles } from "@material-ui/core/styles"
 import { Box, Typography } from "@material-ui/core"
 import clsx from "clsx"
 
-export interface HeaderProps {}
-
 const useStyles = makeStyles((theme) => ({
   height: {
     height: "100%",
@@ -57,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const Header: React.SFC<HeaderProps> = () => {
+const Header = () => {
   const classes = useStyles()
   return (
     <>
