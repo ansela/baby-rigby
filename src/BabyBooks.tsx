@@ -72,9 +72,11 @@ const BabyBooks = () => {
     <>
       <Section header="Baby Books">
         <Typography variant="body1">
-          Instead of registry gifts, Paige has asked for signed baby books to
-          add to Baby Boy Rigby's collection. To keep track and avoid
-          duplicates, we ask that you add your books to the list below. Thanks!
+          Instead of cards, Paige has requested baby books to add to Baby Boy
+          Rigby's collection. There are books to choose from on the registry or
+          maybe you have a childhood favorite? We are asking that you write a
+          personal note to Baby Rigby inside the book as well. Your note to Baby
+          will be cherished for years to come!
         </Typography>
         <Divider />
         <List>
