@@ -17,6 +17,8 @@ import { Document, Outline, Page } from "react-pdf"
 //@ts-ignore
 import { makeStyles } from "@material-ui/styles"
 
+const PDF = "https://rigby-baby.s3.amazonaws.com/shower-games.pdf"
+
 const useStyle = makeStyles({
   accordion: {
     flexDirection: "column",
@@ -83,17 +85,14 @@ const Games = () => {
           <Typography align="center">
             No baby shower would be complete without a few games! Feel free to
             follow along below, or{" "}
-            <Link
-              href={`${process.env.PUBLIC_URL}/shower-games.pdf`}
-              target="_blank"
-            >
+            <Link href={PDF} target="_blank">
               download
             </Link>{" "}
             and print instead. We will go through them together throughout the
             shower!
           </Typography>
           <Document
-            file={`${process.env.PUBLIC_URL}/shower-games.pdf`}
+            file={PDF}
             onLoadSuccess={onDocumentLoadSuccess}
             onLoadError={(error) => {
               console.error("Load Error")
