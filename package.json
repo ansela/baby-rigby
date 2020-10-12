@@ -13,6 +13,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "@types/react-pdf": "^4.0.6",
     "clsx": "^1.1.1",
     "fontsource-roboto": "^3.0.3",
     "husky": "^4.2.5",
@@ -20,6 +21,7 @@
     "prettier": "^2.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-pdf": "^5.0.0",
     "react-scripts": "3.4.3",
     "typescript": "~3.7.2"
   },

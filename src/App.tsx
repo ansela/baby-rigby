@@ -22,6 +22,7 @@ import Section from "./Section"
 import BabyBooks from "./BabyBooks"
 import Footer from "./Footer"
 import Content from "./Content"
+import Games from "./Games"
 
 let theme = createMuiTheme({
   palette: {
@@ -144,6 +145,8 @@ function App() {
               </ListItem>
             ))}
           </List>
+          <Divider style={{ marginBottom: "10px" }} />
+          <Games />
         </Section>
         <BabyBooks />
         <Section header="Registry">
