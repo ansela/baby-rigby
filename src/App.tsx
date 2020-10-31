@@ -12,9 +12,6 @@ import {
   Divider,
   Button,
   Box,
-  List,
-  ListItem,
-  ListItemText,
   Paper,
 } from "@material-ui/core"
 import Header from "./Header"
@@ -22,7 +19,6 @@ import Section from "./Section"
 import BabyBooks from "./BabyBooks"
 import Footer from "./Footer"
 import Content from "./Content"
-import Games from "./Games"
 
 let theme = createMuiTheme({
   palette: {
@@ -40,30 +36,7 @@ let theme = createMuiTheme({
 })
 theme = responsiveFontSizes(theme)
 
-interface MomInfo {
-  name: string
-  email: string
-}
-
-const momsInfo: MomInfo[] = [
-  {
-    name: "Meg Norman",
-    email: "mgnorman3.mn@gmail.com",
-  },
-  {
-    name: "Lisa McKeever",
-    email: "thyme2bloom@gmail.com",
-  },
-  {
-    name: "Sarah Rigby",
-    email: "sjrigby50@gmail.com",
-  },
-]
-
 function App() {
-  const sendEmail = (email: string): void => {
-    window.open(`mailto:${email}?subject=Paige's Baby Shower`)
-  }
   return (
     <ThemeProvider theme={theme}>
       <Header />
@@ -86,67 +59,10 @@ function App() {
           >
             BABY RIGBY IS ON THE WAY AND WE COULD NOT BE MORE EXCITED!!
           </Typography>
-          <Typography variant="body1" align="center" gutterBottom>
-            The Mothers and the Sisters, Nikki, Katie, Rachael, and Ashley,
-            invite you to join us to celebrate with Paige
+          <Typography variant="body1" align="center">
+            Thank you all who were able to attend, in person, virtually, or in
+            spirit, to help celebrate with Paige and shower her with gifts!
           </Typography>
-          <Typography variant="h4" color="secondary" align="center">
-            October 17th, 2020
-          </Typography>
-          <Typography
-            variant="overline"
-            color="secondary"
-            align="center"
-            component="h5"
-            gutterBottom
-          >
-            Beginning at 12:45 PM
-          </Typography>
-          <Grid container justify="center">
-            <Button
-              onClick={() => sendEmail("sjrigby50@gmail.com")}
-              color="primary"
-              size="large"
-            >
-              RSVP NOW
-            </Button>
-          </Grid>
-          <Divider />
-          <Typography variant="body1" align="center" gutterBottom>
-            We are thrilled that extended family and friends will be joining us
-            for the festivities via ZOOM
-          </Typography>
-          <Grid container justify="center">
-            <Box py={3}>
-              <Button
-                variant="contained"
-                color="primary"
-                size="large"
-                onClick={() =>
-                  window.open("https://us02web.zoom.us/j/88379151881", "_blank")
-                }
-              >
-                Join Zoom Now
-              </Button>
-            </Box>
-          </Grid>
-          <Divider />
-          <Typography variant="h5" color="primary" gutterBottom>
-            Contact
-          </Typography>
-          <Typography variant="body1">
-            Please reach out with any questions to any of the moms, see contact
-            info below
-          </Typography>
-          <List dense>
-            {momsInfo.map(({ name, email }: MomInfo) => (
-              <ListItem button key={name} onClick={() => sendEmail(email)}>
-                <ListItemText primary={name} secondary={email} />
-              </ListItem>
-            ))}
-          </List>
-          <Divider style={{ marginBottom: "10px" }} />
-          <Games />
         </Section>
         <BabyBooks />
         <Section header="Registry">
